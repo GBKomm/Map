@@ -1,0 +1,581 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.2,
+          44.45
+        ]
+      },
+      "properties": {
+        "name": "Casa de lângă lac",
+        "city": "Pantelimon, Ilfov",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.601,
+          45.657
+        ]
+      },
+      "properties": {
+        "name": "Solar House – Transilvania University",
+        "city": "Brașov",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1025,
+          44.4268
+        ]
+      },
+      "properties": {
+        "name": "Casa EFdeN",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1025,
+          44.4268
+        ]
+      },
+      "properties": {
+        "name": "AFI New Bucharest",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1125,
+          44.4368
+        ]
+      },
+      "properties": {
+        "name": "AIR Residence",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.15,
+          44.55
+        ]
+      },
+      "properties": {
+        "name": "Amber Gardens",
+        "city": "Tunari",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0925,
+          44.4468
+        ]
+      },
+      "properties": {
+        "name": "Park Aviation 1",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.008,
+          45.4353
+        ]
+      },
+      "properties": {
+        "name": "Belvedere Green Homes Residence",
+        "city": "Galați",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.917,
+          45.767
+        ]
+      },
+      "properties": {
+        "name": "Hemp House",
+        "city": "Sibiel",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.7914,
+          45.1716
+        ]
+      },
+      "properties": {
+        "name": "Slava Russian Ecological House",
+        "city": "Tulcea",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.173,
+          44.49
+        ]
+      },
+      "properties": {
+        "name": "Solar House",
+        "city": "Voluntari",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0925,
+          44.4168
+        ]
+      },
+      "properties": {
+        "name": "Central District 4 Elements",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1075,
+          44.4218
+        ]
+      },
+      "properties": {
+        "name": "Central District Cuza 99",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.6236,
+          46.7712
+        ]
+      },
+      "properties": {
+        "name": "New Hill",
+        "city": "Cluj-Napoca",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1025,
+          44.4668
+        ]
+      },
+      "properties": {
+        "name": "Floreasca 1",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.6036,
+          46.7812
+        ]
+      },
+      "properties": {
+        "name": "Green Campus",
+        "city": "Cluj",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0,
+          44.529
+        ]
+      },
+      "properties": {
+        "name": "Green Loft",
+        "city": "Mogoșoaia",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.082,
+          45.089
+        ]
+      },
+      "properties": {
+        "name": "Jardine Hills",
+        "city": "Prahova",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.6014,
+          47.1585
+        ]
+      },
+      "properties": {
+        "name": "Lake District",
+        "city": "Iași",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0825,
+          44.4318
+        ]
+      },
+      "properties": {
+        "name": "Millstone Development",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.248,
+          45.337
+        ]
+      },
+      "properties": {
+        "name": "Nidus Home",
+        "city": "Brezoi",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.086,
+          44.469
+        ]
+      },
+      "properties": {
+        "name": "One Charles de Gaulle",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.06,
+          44.433
+        ]
+      },
+      "properties": {
+        "name": "One Cotroceni Park",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.094,
+          44.482
+        ]
+      },
+      "properties": {
+        "name": "One Herăstrău Park",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.095,
+          44.486
+        ]
+      },
+      "properties": {
+        "name": "One Herăstrău Plaza",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.093,
+          44.489
+        ]
+      },
+      "properties": {
+        "name": "One Herăstrău Towers",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.102,
+          44.455
+        ]
+      },
+      "properties": {
+        "name": "One Mircea Eliade",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1175,
+          44.4418
+        ]
+      },
+      "properties": {
+        "name": "Oxygen Home",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0875,
+          44.4118
+        ]
+      },
+      "properties": {
+        "name": "Petru Rareș 1259",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.1175,
+          44.4068
+        ]
+      },
+      "properties": {
+        "name": "Gramont Neighborhood",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.0975,
+          44.4618
+        ]
+      },
+      "properties": {
+        "name": "Rahmaninov Residence",
+        "city": "Bucharest",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.078,
+          44.508
+        ]
+      },
+      "properties": {
+        "name": "Oak Tiriac 2",
+        "city": "Băneasa",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          25.993,
+          45.596
+        ]
+      },
+      "properties": {
+        "name": "Valley 21",
+        "city": "Vama Buzăului",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.5936,
+          46.7612
+        ]
+      },
+      "properties": {
+        "name": "Vision",
+        "city": "Cluj",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.5736,
+          46.7512
+        ]
+      },
+      "properties": {
+        "name": "West Side Park",
+        "city": "Cluj-Napoca",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.5636,
+          46.7412
+        ]
+      },
+      "properties": {
+        "name": "Wings",
+        "city": "Cluj-Napoca",
+        "factsheet_link": "",
+        "image_url": ""
+      }
+    }
+  ]
+}
