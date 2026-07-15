@@ -14,7 +14,8 @@
         "name": "Casa de lângă lac",
         "city": "Pantelimon, Ilfov",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -30,7 +31,8 @@
         "name": "Solar House – Transilvania University",
         "city": "Brașov",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -46,7 +48,8 @@
         "name": "Casa EFdeN",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -62,7 +65,8 @@
         "name": "AFI New Bucharest",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -78,7 +82,8 @@
         "name": "AIR Residence",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -94,7 +99,8 @@
         "name": "Amber Gardens",
         "city": "Tunari",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -110,7 +116,8 @@
         "name": "Park Aviation 1",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -126,7 +133,8 @@
         "name": "Belvedere Green Homes Residence",
         "city": "Galați",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -142,7 +150,8 @@
         "name": "Hemp House",
         "city": "Sibiel",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -158,7 +167,8 @@
         "name": "Slava Russian Ecological House",
         "city": "Tulcea",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -174,7 +184,8 @@
         "name": "Solar House",
         "city": "Voluntari",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -190,7 +201,8 @@
         "name": "Central District 4 Elements",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -206,7 +218,8 @@
         "name": "Central District Cuza 99",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -222,7 +235,8 @@
         "name": "New Hill",
         "city": "Cluj-Napoca",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -238,7 +252,8 @@
         "name": "Floreasca 1",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -254,7 +269,8 @@
         "name": "Green Campus",
         "city": "Cluj",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -270,7 +286,8 @@
         "name": "Green Loft",
         "city": "Mogoșoaia",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -286,7 +303,8 @@
         "name": "Jardine Hills",
         "city": "Prahova",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -302,7 +320,8 @@
         "name": "Lake District",
         "city": "Iași",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -318,7 +337,8 @@
         "name": "Millstone Development",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -334,7 +354,8 @@
         "name": "Nidus Home",
         "city": "Brezoi",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -350,7 +371,8 @@
         "name": "One Charles de Gaulle",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -366,7 +388,8 @@
         "name": "One Cotroceni Park",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -382,7 +405,8 @@
         "name": "One Herăstrău Park",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -398,7 +422,8 @@
         "name": "One Herăstrău Plaza",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -414,7 +439,8 @@
         "name": "One Herăstrău Towers",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -430,7 +456,8 @@
         "name": "One Mircea Eliade",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -446,7 +473,8 @@
         "name": "Oxygen Home",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -462,7 +490,8 @@
         "name": "Petru Rareș 1259",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -478,7 +507,8 @@
         "name": "Gramont Neighborhood",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -494,7 +524,8 @@
         "name": "Rahmaninov Residence",
         "city": "Bucharest",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -510,7 +541,8 @@
         "name": "Oak Tiriac 2",
         "city": "Băneasa",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -526,7 +558,8 @@
         "name": "Valley 21",
         "city": "Vama Buzăului",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -542,7 +575,8 @@
         "name": "Vision",
         "city": "Cluj",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -558,7 +592,8 @@
         "name": "West Side Park",
         "city": "Cluj-Napoca",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     },
     {
@@ -574,7 +609,8 @@
         "name": "Wings",
         "city": "Cluj-Napoca",
         "factsheet_link": "",
-        "image_url": ""
+        "image_url": "",
+        "color": "#E94B35"
       }
     }
   ]
