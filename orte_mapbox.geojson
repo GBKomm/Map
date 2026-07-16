@@ -31,7 +31,7 @@
         "name": "Solar House – Transilvania University",
         "city": "Brașov",
         "factsheet_link": "",
-        "image_url": "https://cdn.prod.website-files.com/6a5799d5b73acba8686f656c/6a5889623eb07e0e7ca993f4_SOLAR%20HOUSE%20(CASA%20SOLARIS).png",
+        "image_url": "",
         "color": "#0b7d3b"
       }
     },
@@ -184,7 +184,7 @@
         "name": "Solar House",
         "city": "Voluntari",
         "factsheet_link": "",
-        "image_url": "",
+        "image_url": "https://cdn.prod.website-files.com/6a5799d5b73acba8686f656c/6a5889623eb07e0e7ca993f4_SOLAR%20HOUSE%20(CASA%20SOLARIS).png",
         "color": "#2d6cdf"
       }
     },
