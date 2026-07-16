@@ -438,8 +438,8 @@
       "properties": {
         "name": "One Herăstrău Towers",
         "city": "Bucharest",
-        "factsheet_link": "https://cdn.prod.website-files.com/6a5799d5b73acba8686f656c/6a5889623b330f9f6a478528_ONE%20HERA%CC%86STRA%CC%86U%20TOWERS.png",
-        "image_url": "",
+        "factsheet_link": "",
+        "image_url": "https://cdn.prod.website-files.com/6a5799d5b73acba8686f656c/6a5889623b330f9f6a478528_ONE%20HERA%CC%86STRA%CC%86U%20TOWERS.png",
         "color": "#2d6cdf"
       }
     },
