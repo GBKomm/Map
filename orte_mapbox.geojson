@@ -421,8 +421,8 @@
       "properties": {
         "name": "One Herăstrău Plaza",
         "city": "Bucharest",
-        "factsheet_link": "https://cdn.prod.website-files.com/6a5799d5b73acba8686f656c/6a58896275ed8525e724e4e3_ONE%20HERA%CC%86STRA%CC%86U%20PLAZA.png",
-        "image_url": "",
+        "factsheet_link": "",
+        "image_url": "https://cdn.prod.website-files.com/6a5799d5b73acba8686f656c/6a58896275ed8525e724e4e3_ONE%20HERA%CC%86STRA%CC%86U%20PLAZA.png",
         "color": "#2d6cdf"
       }
     },
