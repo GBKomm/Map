@@ -174,8 +174,826 @@
   <script>
 
     /*
-    HIER KOMMT DEIN KOMPLETTER
-    AKTUELLER MAPBOX-JAVASCRIPT-CODE HIN
+   <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZWJwa29tbXVuaWthdGlvbiIsImEiOiJja3p6c2NiY3IwMDhxM2NydHdscDAya2VpIn0.UlQULRZVREDDW5BfKKjFCg';
+
+
+  /*
+  ----------------------------------------
+  KARTENBEREICHE
+  ----------------------------------------
+  */
+
+  // Rumänien – dieser Bereich soll in der
+  // Gesamtansicht immer vollständig sichtbar sein.
+  const romaniaBounds = [
+    [20.2, 43.6], // Südwest
+    [29.8, 48.3]  // Nordost
+  ];
+
+  // Etwas grösserer Bereich für die Navigation.
+  // Der Nutzer kann hineinzoomen und sich bewegen,
+  // aber nicht beliebig weit von Rumänien entfernen.
+  const navigationBounds = [
+    [18.0, 41.5],
+    [32.0, 50.5]
+  ];
+
+
+  /*
+  ----------------------------------------
+  RESPONSIVE PADDING
+  ----------------------------------------
+  Der Abstand rund um Rumänien passt sich
+  automatisch an die Grösse des Kartenfensters an.
+  ----------------------------------------
+  */
+
+  function getResponsivePadding() {
+
+    const mapElement =
+      document.getElementById('map');
+
+    const width =
+      mapElement.clientWidth;
+
+    const height =
+      mapElement.clientHeight;
+
+    // Ungefähr 7 % Abstand,
+    // mit sinnvollen Mindest- und Maximalwerten.
+
+    const horizontalPadding =
+      Math.max(
+        20,
+        Math.min(100, width * 0.07)
+      );
+
+    const verticalPadding =
+      Math.max(
+        20,
+        Math.min(80, height * 0.07)
+      );
+
+    return {
+      top: verticalPadding,
+      bottom: verticalPadding,
+      left: horizontalPadding,
+      right: horizontalPadding
+    };
+  }
+
+
+  /*
+  ----------------------------------------
+  MAPBOX KARTE INITIALISIEREN
+  ----------------------------------------
+  */
+
+  const map = new mapboxgl.Map({
+    container: 'map',
+
+    style:
+      'mapbox://styles/ebpkommunikation/cmrm3f4te002201r19bpgbhst',
+
+    center: [24.9, 45.9],
+
+    zoom: 5,
+
+    maxBounds: navigationBounds
+  });
+
+
+  /*
+  Aktuelle minimale Zoomstufe.
+  Wird bei Responsive-Änderungen neu berechnet.
+  */
+
+  let overviewZoom = null;
+
+
+  /*
+  ----------------------------------------
+  RESPONSIVE GESAMTANSICHT
+  ----------------------------------------
+  */
+
+  function updateResponsiveOverview(
+    forceOverview = false
+  ) {
+
+    /*
+    Mapbox über die aktuelle
+    Containergrösse informieren.
+    */
+
+    map.resize();
+
+
+    /*
+    Prüfen, ob der Nutzer aktuell noch
+    ungefähr in der Gesamtansicht ist.
+
+    Wenn er hineingezoomt hat, soll ein
+    Resize ihn nicht wieder herauszoomen.
+    */
+
+    const wasAtOverview =
+      overviewZoom === null ||
+      map.getZoom() <= overviewZoom + 0.15;
+
+
+    /*
+    Passende Kamera berechnen:
+    Rumänien vollständig + responsiver Abstand.
+    */
+
+    const camera =
+      map.cameraForBounds(
+        romaniaBounds,
+        {
+          padding:
+            getResponsivePadding()
+        }
+      );
+
+
+    if (
+      !camera ||
+      camera.zoom === undefined ||
+      !camera.center
+    ) {
+      return;
+    }
+
+
+    /*
+    Neue minimale Zoomstufe speichern.
+    Weiter herauszoomen ist nicht möglich.
+    */
+
+    overviewZoom =
+      camera.zoom;
+
+    map.setMinZoom(
+      overviewZoom
+    );
+
+
+    /*
+    Beim ersten Laden:
+    immer auf Gesamtansicht setzen.
+
+    Bei späterem Resize:
+    nur anpassen, wenn Nutzer noch
+    in der Gesamtansicht war.
+    */
+
+    if (
+      forceOverview ||
+      wasAtOverview
+    ) {
+
+      map.jumpTo({
+        center: camera.center,
+        zoom: camera.zoom
+      });
+
+    }
+  }
+
+
+  /*
+  ----------------------------------------
+  MAP GELADEN
+  ----------------------------------------
+  */
+
+  map.on('load', () => {
+
+
+    /*
+    Responsive Gesamtansicht initial setzen.
+    */
+
+    updateResponsiveOverview(true);
+
+
+    /*
+    ----------------------------------------
+    ALTEN MAPBOX-STUDIO-PUNKTE-LAYER
+    AUSBLENDEN
+    ----------------------------------------
+    */
+
+    if (
+      map.getLayer(
+        '357db853e9e5df419515'
+      )
+    ) {
+
+      map.setLayoutProperty(
+        '357db853e9e5df419515',
+        'visibility',
+        'none'
+      );
+
+    }
+
+
+    /*
+    ----------------------------------------
+    GEOJSON VON GITHUB LADEN
+    ----------------------------------------
+    */
+
+    map.addSource(
+      'projects',
+      {
+        type: 'geojson',
+
+        data:
+          'https://raw.githubusercontent.com/GBKomm/Map/refs/heads/main/orte_mapbox.geojson'
+      }
+    );
+
+
+    /*
+    ----------------------------------------
+    PUNKTE DARSTELLEN
+    ----------------------------------------
+    */
+
+    map.addLayer({
+
+      id:
+        'project-points',
+
+      type:
+        'circle',
+
+      source:
+        'projects',
+
+      paint: {
+
+        'circle-radius':
+          7,
+
+        // Individuelle Farbe aus GeoJSON
+        'circle-color': [
+          'get',
+          'color'
+        ],
+
+        // Farben im Dark Style unverändert
+        'circle-emissive-strength':
+          1,
+
+        // Keine Kontur
+        'circle-stroke-width':
+          0
+
+      }
+
+    });
+
+
+    /*
+    ----------------------------------------
+    WEBFLOW POPUP ELEMENTE
+    ----------------------------------------
+    */
+
+    const popup =
+      document.getElementById(
+        'project-popup'
+      );
+
+    const popupImage =
+      document.getElementById(
+        'popup-image'
+      );
+
+    const popupName =
+      document.getElementById(
+        'popup-name'
+      );
+
+    const popupCity =
+      document.getElementById(
+        'popup-city'
+      );
+
+    const popupFactsheet =
+      document.getElementById(
+        'popup-factsheet'
+      );
+
+
+    /*
+    Falls Popup-Elemente fehlen,
+    Karte und Punkte trotzdem anzeigen.
+    */
+
+    if (
+      !popup ||
+      !popupImage ||
+      !popupName ||
+      !popupCity ||
+      !popupFactsheet
+    ) {
+
+      console.warn(
+        'Ein oder mehrere Popup-Elemente wurden nicht gefunden.'
+      );
+
+      return;
+
+    }
+
+
+    let activeCoordinates =
+      null;
+
+    let hideTimer;
+
+
+    /*
+    ----------------------------------------
+    POPUP POSITIONIEREN
+    ----------------------------------------
+
+    Linke Kartenhälfte:
+    Popup rechts vom Punkt.
+
+    Rechte Kartenhälfte:
+    Popup links vom Punkt.
+    ----------------------------------------
+    */
+
+    function positionPopup() {
+
+      if (
+        !activeCoordinates
+      ) {
+        return;
+      }
+
+
+      const point =
+        map.project(
+          activeCoordinates
+        );
+
+
+      const mapWidth =
+        map
+          .getContainer()
+          .clientWidth;
+
+
+      popup.style.top =
+        point.y + 'px';
+
+
+      if (
+        point.x <
+        mapWidth / 2
+      ) {
+
+        // Rechts vom Punkt
+
+        popup.style.left =
+          point.x + 'px';
+
+        popup.style.transform =
+          'translate(16px, -50%)';
+
+      } else {
+
+        // Links vom Punkt
+
+        popup.style.left =
+          point.x + 'px';
+
+        popup.style.transform =
+          'translate(calc(-100% - 16px), -50%)';
+
+      }
+
+    }
+
+
+    /*
+    ----------------------------------------
+    POPUP ANZEIGEN
+    ----------------------------------------
+    */
+
+    function showPopup(
+      feature
+    ) {
+
+      const props =
+        feature.properties;
+
+
+      activeCoordinates =
+        feature
+          .geometry
+          .coordinates
+          .slice();
+
+
+      /*
+      NAME
+      */
+
+      popupName.textContent =
+        props.name || '';
+
+
+      /*
+      CITY
+      */
+
+      popupCity.textContent =
+        props.city || '';
+
+
+      /*
+      BILD
+      ----------------------------------------
+      Bild wird vollständig dargestellt.
+      Keine Beschneidung.
+      ----------------------------------------
+      */
+
+      if (
+        props.image_url &&
+        props.image_url.trim() !== ''
+      ) {
+
+        /*
+        Alte Webflow-Bildquellen entfernen
+        */
+
+        popupImage.removeAttribute(
+          'src'
+        );
+
+        popupImage.removeAttribute(
+          'srcset'
+        );
+
+        popupImage.removeAttribute(
+          'sizes'
+        );
+
+
+        /*
+        CSS-Effekte zurücksetzen
+        */
+
+        popupImage.style.filter =
+          'none';
+
+        popupImage.style.mixBlendMode =
+          'normal';
+
+        popupImage.style.opacity =
+          '1';
+
+
+        /*
+        Bild proportional
+        und vollständig anzeigen
+        */
+
+        popupImage.style.width =
+          '100%';
+
+        popupImage.style.height =
+          'auto';
+
+        popupImage.style.objectFit =
+          'contain';
+
+        popupImage.style.display =
+          'block';
+
+
+        /*
+        Neues Bild setzen
+        */
+
+        popupImage.src =
+          props.image_url.trim();
+
+        popupImage.alt =
+          props.name || '';
+
+
+        /*
+        Ladefehler
+        */
+
+        popupImage.onerror =
+          function() {
+
+            console.warn(
+              'Bild konnte nicht geladen werden:',
+              props.image_url
+            );
+
+            popupImage.removeAttribute(
+              'src'
+            );
+
+            popupImage.style.display =
+              'none';
+
+          };
+
+
+        /*
+        Erfolgreich geladen
+        */
+
+        popupImage.onload =
+          function() {
+
+            popupImage.style.display =
+              'block';
+
+          };
+
+      } else {
+
+        popupImage.removeAttribute(
+          'src'
+        );
+
+        popupImage.removeAttribute(
+          'srcset'
+        );
+
+        popupImage.removeAttribute(
+          'sizes'
+        );
+
+        popupImage.style.display =
+          'none';
+
+      }
+
+
+      /*
+      ----------------------------------------
+      FACTSHEET LINK
+      ----------------------------------------
+      */
+
+      if (
+        props.factsheet_link &&
+        props.factsheet_link.trim() !== ''
+      ) {
+
+        popupFactsheet.href =
+          props.factsheet_link.trim();
+
+        popupFactsheet.target =
+          '_blank';
+
+        popupFactsheet.rel =
+          'noopener noreferrer';
+
+        popupFactsheet.style.display =
+          '';
+
+      } else {
+
+        popupFactsheet.removeAttribute(
+          'href'
+        );
+
+        popupFactsheet.style.display =
+          'none';
+
+      }
+
+
+      /*
+      Popup anzeigen
+      */
+
+      positionPopup();
+
+      popup.style.display =
+        'block';
+
+    }
+
+
+    /*
+    ----------------------------------------
+    POPUP AUSBLENDEN
+    ----------------------------------------
+    */
+
+    function hidePopup() {
+
+      popup.style.display =
+        'none';
+
+      activeCoordinates =
+        null;
+
+    }
+
+
+    /*
+    ----------------------------------------
+    HOVER ÜBER PUNKT
+    ----------------------------------------
+    */
+
+    map.on(
+      'mouseenter',
+      'project-points',
+      (e) => {
+
+        clearTimeout(
+          hideTimer
+        );
+
+
+        map
+          .getCanvas()
+          .style
+          .cursor =
+            'pointer';
+
+
+        if (
+          e.features &&
+          e.features.length > 0
+        ) {
+
+          showPopup(
+            e.features[0]
+          );
+
+        }
+
+      }
+    );
+
+
+    /*
+    ----------------------------------------
+    PUNKT VERLASSEN
+    ----------------------------------------
+    */
+
+    map.on(
+      'mouseleave',
+      'project-points',
+      () => {
+
+        map
+          .getCanvas()
+          .style
+          .cursor =
+            '';
+
+
+        hideTimer =
+          setTimeout(
+            hidePopup,
+            200
+          );
+
+      }
+    );
+
+
+    /*
+    ----------------------------------------
+    POPUP OFFEN HALTEN
+    ----------------------------------------
+    */
+
+    popup.addEventListener(
+      'mouseenter',
+      () => {
+
+        clearTimeout(
+          hideTimer
+        );
+
+      }
+    );
+
+
+    /*
+    ----------------------------------------
+    POPUP VERLASSEN
+    ----------------------------------------
+    */
+
+    popup.addEventListener(
+      'mouseleave',
+      () => {
+
+        hideTimer =
+          setTimeout(
+            hidePopup,
+            200
+          );
+
+      }
+    );
+
+
+    /*
+    ----------------------------------------
+    POPUP BEIM ZOOMEN / VERSCHIEBEN
+    AM PUNKT HALTEN
+    ----------------------------------------
+    */
+
+    map.on(
+      'move',
+      positionPopup
+    );
+
+
+    map.on(
+      'resize',
+      positionPopup
+    );
+
+  });
+
+
+  /*
+  ----------------------------------------
+  RESPONSIVE IFRAME / CONTAINER
+  ----------------------------------------
+
+  Erkennt nicht nur Browser-Resizes,
+  sondern auch Änderungen der Grösse
+  des Webflow-/iframe-Containers.
+  ----------------------------------------
+  */
+
+  const mapContainer =
+    document.getElementById(
+      'map'
+    );
+
+
+  let resizeFrame =
+    null;
+
+
+  const resizeObserver =
+    new ResizeObserver(
+      () => {
+
+        if (
+          resizeFrame
+        ) {
+
+          cancelAnimationFrame(
+            resizeFrame
+          );
+
+        }
+
+
+        resizeFrame =
+          requestAnimationFrame(
+            () => {
+
+              updateResponsiveOverview(
+                false
+              );
+
+            }
+          );
+
+      }
+    );
+
+
+  resizeObserver.observe(
+    mapContainer
+  );
+
+</script>
     */
 
   </script>
